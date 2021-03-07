@@ -12,7 +12,7 @@ function onVelueBoxes (evens) {
   
   return amount;
 }
-console.log(amount)
+// console.log(amount)
 
 createBtnRef.addEventListener('click', function () {
  if ( amount === undefined ) {
