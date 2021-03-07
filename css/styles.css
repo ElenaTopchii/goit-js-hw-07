@@ -46,3 +46,21 @@ ul {
 #validation-input.invalid {
   border-color: #f44336;
 }
+
+#font-size-control {
+  display: flex;
+  padding-top: 15px;
+  margin: 15px;
+}
+
+#text {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 15px;
+}
+
+input {
+  padding-top: 15px;
+
+  margin: 15px;
+}
