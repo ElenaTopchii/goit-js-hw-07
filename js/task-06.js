@@ -6,15 +6,22 @@ validationInputRef.addEventListener('blur', onInputBlur);
 function onInputBlur(event) {
   let inputValue = event.target.value.length;
   if (inputValue === minInputlengthRef) {
-    event.target.classList.add('valid');
-    event.target.classList.remove('invalid');
+    toAddClass('valid');
+    toRemoveClass('invalid');
   }
   if (inputValue !== minInputlengthRef) {
-    event.target.classList.add('invalid');
-    event.target.classList.remove('valid');
+    toAddClass('invalid');
+    toRemoveClass('valid');
   }
   if (inputValue === 0) {
-    event.target.classList.remove('valid');
-    event.target.classList.remove('invalid');
+    toRemoveClass('valid');
+    toRemoveClass('invalid');
+  }
+
+  function toAddClass (nameClass) {
+    event.target.classList.add(`${nameClass}`)
+  }
+  function toRemoveClass (nameClass) {
+    event.target.classList.remove(`${nameClass}`)
   }
 }
